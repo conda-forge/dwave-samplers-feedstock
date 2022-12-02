@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dwave-samplers-{{ version }}.tar.gz
-  sha256: 96da7eab365f2cd29abd0083221296c2a600b46679a97b5e93244bc7d5cbd866
+  url: https://github.com/dwavesystems/dwave-samplers/archive/refs/tags/{{ version }}.tar.gz
+  sha256: d28df71dd653a825ac7edccaccd6b625bffab1169aca7f09b37418187c40ea71
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
