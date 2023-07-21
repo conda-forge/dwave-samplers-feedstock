@@ -1,5 +1,5 @@
 {% set name = "dwave-samplers" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/dwavesystems/dwave-samplers/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d28df71dd653a825ac7edccaccd6b625bffab1169aca7f09b37418187c40ea71
+  sha256: ca254ece94421305ffa2202a328f1068312699bc4aacf87984e6b50ce59db205
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
