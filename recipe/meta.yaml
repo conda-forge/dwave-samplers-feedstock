@@ -22,6 +22,7 @@ requirements:
     - dimod >=0.12.0,<0.13.0                 # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
   host:
     - python
     - numpy
