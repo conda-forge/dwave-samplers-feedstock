@@ -1,5 +1,5 @@
 {% set name = "dwave-samplers" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/dwavesystems/dwave-samplers/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 843dbdf90318e6b503a1fb4ea697bad6a53f942a4683a584e55bdf3837c913d3
+  sha256: 2bd30a06c7363c7c28e74dfd1e5d56b9e41068904ab7a1752369b16f3bd219cd
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -32,9 +32,10 @@ requirements:
     - setuptools >=46.4.0
     - wheel >=0.30.0
   run:
+    - numpy >=1.21.6,<3.0.0
     - python
-    - dimod >=0.12.17,<0.13.0
-    - networkx >=3.0
+    - dimod >=0.12.21,<0.13.0
+    - networkx >=3,<4
 
 test:
   imports:
